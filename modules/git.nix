@@ -7,44 +7,6 @@
 }:
 {
   programs = {
-    bat = {
-      config = {
-        style = "changes";
-        theme = "base16";
-      };
-
-      enable = true;
-    };
-
-    fzf = {
-      enable = true;
-
-      colors = with config.scheme.withHashtag; {
-        bg = base00;
-        "bg+" = base01;
-        border = base03;
-        fg = base05;
-        "fg+" = base05;
-        header = base08;
-        hl = base08;
-        "hl+" = base08;
-        info = config.scheme.withHashtag.${config.colors.accent};
-        label = base05;
-        marker = base07;
-        pointer = base06;
-        prompt = config.scheme.withHashtag.${config.colors.accent};
-        "selected-bg" = base02;
-        spinner = base06;
-      };
-
-      defaultOptions = [
-        "--height 40%"
-        "--border"
-      ];
-
-      enableZshIntegration = true;
-    };
-
     gh = {
       enable = true;
 
@@ -90,8 +52,5 @@
       enable = true;
       enableZshIntegration = true;
     };
-
-    lazysql.enable = true;
   };
-
 }
