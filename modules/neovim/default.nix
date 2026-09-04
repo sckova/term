@@ -3,25 +3,20 @@
   lib,
   pkgs,
   inputs,
-  isLinux,
   ...
 }:
 {
-  imports =
-    with inputs;
-    [
-      ./colors.nix
-      ./keybinds.nix
-      ./pedantix.nix
-      ./plugins/coding.nix
-      ./plugins/lualine.nix
-      ./settings.nix
-      nixvim.homeModules.nixvim
-      pedantix.homeModules.default
-    ]
-    ++ lib.optionals isLinux [
-      ./app.nix
-    ];
+  imports = with inputs; [
+    ./app.nix
+    ./colors.nix
+    ./keybinds.nix
+    ./pedantix.nix
+    ./plugins/coding.nix
+    ./plugins/lualine.nix
+    ./settings.nix
+    nixvim.homeModules.nixvim
+    pedantix.homeModules.default
+  ];
 
   home = with pkgs; {
     packages = [ page ];
