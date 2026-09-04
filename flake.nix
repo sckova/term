@@ -26,6 +26,7 @@
     {
       homeModules.default = { ... }: {
         imports = with inputs; [
+          ./lib
           ./modules
           nixvim.homeModules.nixvim
           pedantix.homeModules.default
