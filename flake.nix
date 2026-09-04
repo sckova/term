@@ -3,8 +3,6 @@
   description = "home-manager terminal setup";
 
   inputs = {
-    base16.url = "github:SenchoPens/base16.nix";
-
     home-manager = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/home-manager";
@@ -29,7 +27,6 @@
       homeModules.default = { ... }: {
         imports = with inputs; [
           ./modules
-          base16.homeManagerModule
           nixvim.homeModules.nixvim
           pedantix.homeModules.default
         ];
