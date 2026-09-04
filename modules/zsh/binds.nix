@@ -1,4 +1,4 @@
-# home/sckova/terminal/zsh/binds.nix
+# modules/zsh/binds.nix
 {
   home.file.".config/zsh/binds.zsh".text = /* zsh */ ''
     # load zpty module

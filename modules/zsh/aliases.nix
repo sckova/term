@@ -1,4 +1,4 @@
-# home/sckova/terminal/zsh/aliases.nix
+# modules/zsh/aliases.nix
 {
   home.shellAliases = {
     ":q" = "exit";

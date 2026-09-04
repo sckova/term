@@ -1,3 +1,4 @@
+# modules/misc.nix
 {
   config,
   lib,

@@ -1,4 +1,4 @@
-# home/sckova/terminal/fastfetch.nix
+# modules/fastfetch.nix
 # credit to harilvfs:
 # https://github.com/harilvfs/fastfetch
 {

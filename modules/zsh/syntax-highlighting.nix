@@ -1,4 +1,4 @@
-# home/sckova/terminal/zsh/syntax-highlighting.nix
+# modules/zsh/syntax-highlighting.nix
 {
   home.file.".config/zsh/fast-syntax-colors.zsh".text = /* zsh */ ''
     # runs before fast-syntax-highlighting sources (order 1000 vs 1200),

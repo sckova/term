@@ -1,4 +1,4 @@
-# home/sckova/terminal/neovim/colors.nix
+# modules/neovim/colors.nix
 { config, ... }:
 {
   programs.nixvim = {

@@ -1,4 +1,4 @@
-# home/sckova/terminal/zsh/default.nix
+# modules/zsh/default.nix
 {
   imports = [
     ./aliases.nix

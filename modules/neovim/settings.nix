@@ -1,4 +1,4 @@
-# home/sckova/terminal/neovim/settings.nix
+# modules/neovim/settings.nix
 {
   pkgs,
   ...

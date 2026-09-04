@@ -1,4 +1,4 @@
-# home/sckova/terminal/neovim/plugins/lualine.nix
+# modules/neovim/plugins/lualine.nix
 { config, ... }:
 {
   programs.nixvim.plugins.lualine = with config.scheme.withHashtag; {

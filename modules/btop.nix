@@ -1,4 +1,4 @@
-# home/sckova/terminal/btop.nix
+# modules/btop.nix
 {
   config,
   lib,

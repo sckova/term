@@ -1,4 +1,4 @@
-# home/sckova/terminal/neovim/plugins/coding.nix
+# modules/neovim/plugins/coding.nix
 {
   lib,
   pkgs,

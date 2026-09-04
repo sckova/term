@@ -1,4 +1,4 @@
-# home/sckova/terminal/zsh/settings.nix
+# modules/zsh/settings.nix
 # comments taken from:
 # https://nix-community.github.io/home-manager/options/home-manager/programs/zsh.html
 {

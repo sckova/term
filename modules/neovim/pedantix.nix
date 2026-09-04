@@ -1,4 +1,4 @@
-# home/sckova/terminal/neovim/pedantix.nix
+# modules/neovim/pedantix.nix
 {
   pkgs,
   termInputs,

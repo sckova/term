@@ -1,4 +1,4 @@
-# home/sckova/terminal/default.nix
+# modules/default.nix
 {
   imports = [
     ./btop.nix

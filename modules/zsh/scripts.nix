@@ -1,4 +1,4 @@
-# home/sckova/terminal/zsh/scripts.nix
+# modules/zsh/scripts.nix
 {
   lib,
   pkgs,
