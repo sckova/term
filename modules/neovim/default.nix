@@ -2,11 +2,11 @@
 {
   lib,
   pkgs,
-  inputs,
+  termInputs,
   ...
 }:
 {
-  imports = with inputs; [
+  imports = with termInputs; [
     ./app.nix
     ./colors.nix
     ./keybinds.nix

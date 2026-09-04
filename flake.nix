@@ -32,7 +32,7 @@
           base16.homeManagerModule
         ];
 
-        _module.args.inputs = inputs;
+        _module.args.termInputs = inputs;
       };
     };
 }
