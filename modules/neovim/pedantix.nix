@@ -1,7 +1,13 @@
 # home/sckova/terminal/neovim/pedantix.nix
 {
+  pkgs,
+  termInputs,
+  ...
+}:
+{
   programs.pedantix = {
     enable = true;
+    package = termInputs.pedantix.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
     settings = {
       attrs = {

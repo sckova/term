@@ -2,11 +2,10 @@
 {
   lib,
   pkgs,
-  termInputs,
   ...
 }:
 {
-  imports = with termInputs; [
+  imports = [
     ./app.nix
     ./colors.nix
     ./keybinds.nix
@@ -14,8 +13,6 @@
     ./plugins/coding.nix
     ./plugins/lualine.nix
     ./settings.nix
-    nixvim.homeModules.nixvim
-    pedantix.homeModules.default
   ];
 
   home = with pkgs; {

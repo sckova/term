@@ -30,6 +30,8 @@
         imports = with inputs; [
           ./modules
           base16.homeManagerModule
+          nixvim.homeModules.nixvim
+          pedantix.homeModules.default
         ];
 
         _module.args.termInputs = inputs;
