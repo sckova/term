@@ -77,16 +77,14 @@
     };
 
     # Content to be added to ~/.config/zsh/.zshrc
-    initContent = lib.mkMerge [
-      (lib.concatLines (
-        map (f: "source ~/.config/zsh/${f}.zsh") [
-          "binds"
-          "colors"
-          "prompt"
-          "fast-syntax-colors"
-        ]
-      ))
-    ];
+    initContent = lib.concatStringsSep "\n\n" (
+      map (n: config.zshrc.${n}) [
+        "binds"
+        "colors"
+        "prompt"
+        "fast-syntax-colors"
+      ]
+    );
 
     localVariables = {
       # history-substring-search: deduplicate history

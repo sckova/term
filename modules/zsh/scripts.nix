@@ -6,8 +6,6 @@
 }:
 {
   home = {
-    file.".local/share/bin/.keep".text = ""; # Ensure directory exists
-
     packages = [
       (pkgs.writeScriptBin "nix-format" /* zsh */ ''
         #!${pkgs.zsh}/bin/zsh

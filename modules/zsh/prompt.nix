@@ -5,38 +5,30 @@
   ...
 }:
 {
-  home.file = {
-    ".config/zsh/colors.zsh" = {
-      force = true;
+  config.zshrc = {
+    colors = lib.concatStringsSep "\n" (
+      lib.mapAttrsToList (name: value: "color_${name}=${value}") (
+        lib.filterAttrs (
+          n: v: builtins.isString v && builtins.match "^base[0-9A-Fa-f]{2}$" n != null
+        ) config.palette.withHashtag
+      )
+      ++ [ "color_accent=${config.palette.withHashtag.${config.colors.accent}}" ]
+    );
 
-      text = lib.concatStringsSep "\n" (
-        lib.mapAttrsToList (name: value: "color_${name}=${value}") (
-          lib.filterAttrs (
-            n: v: builtins.isString v && builtins.match "^base[0-9A-Fa-f]{2}$" n != null
-          ) config.palette.withHashtag
-        )
-        ++ [ "color_accent=${config.palette.withHashtag.${config.colors.accent}}" ]
-      );
-    };
+    prompt = /* zsh */ ''
+      autoload -Uz vcs_info
+      setopt PROMPT_SUBST
+      zstyle ':vcs_info:git:*' formats ' (%b)'
+      precmd_functions+=(vcs_info)
 
-    ".config/zsh/prompt.zsh" = {
-      force = true;
+      typeset -g prompt_usr='%F{cyan}%n%f'
+      typeset -g prompt_hst='%F{$color_accent}%m%f'
+      typeset -g prompt_dir='%F{green}''${PWD/#$HOME/~}%f'
+      typeset -g prompt_git='$vcs_info_msg_0_%f'
+      typeset -g prompt_nix="%F{magenta}''${IN_NIX_SHELL:+ <nix-shell>}%f"
 
-      text = /* zsh */ ''
-        autoload -Uz vcs_info
-        setopt PROMPT_SUBST
-        zstyle ':vcs_info:git:*' formats ' (%b)'
-        precmd_functions+=(vcs_info)
-
-        typeset -g prompt_usr='%F{cyan}%n%f'
-        typeset -g prompt_hst='%F{$color_accent}%m%f'
-        typeset -g prompt_dir='%F{green}''${PWD/#$HOME/~}%f'
-        typeset -g prompt_git='$vcs_info_msg_0_%f'
-        typeset -g prompt_nix="%F{magenta}''${IN_NIX_SHELL:+ <nix-shell>}%f"
-
-        PROMPT="''${prompt_usr}@''${prompt_hst} ''${prompt_dir}''${prompt_git}''${prompt_nix}
-        > "
-      '';
-    };
+      PROMPT="''${prompt_usr}@''${prompt_hst} ''${prompt_dir}''${prompt_git}''${prompt_nix}
+      > "
+    '';
   };
 }

@@ -1,5 +1,9 @@
 # modules/zsh/default.nix
 {
+  lib,
+  ...
+}:
+{
   imports = [
     ./aliases.nix
     ./binds.nix
@@ -9,6 +13,15 @@
     ./syntax-highlighting.nix
   ];
 
-  home.shell.enableZshIntegration = true;
-  programs.zsh.enable = true;
+  options.zshrc = lib.mkOption {
+    default = { };
+    description = "concatenated zsh initContent";
+    internal = true;
+    type = lib.types.attrsOf lib.types.lines;
+  };
+
+  config = {
+    home.shell.enableZshIntegration = true;
+    programs.zsh.enable = true;
+  };
 }

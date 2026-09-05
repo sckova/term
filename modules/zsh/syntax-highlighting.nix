@@ -1,6 +1,6 @@
 # modules/zsh/syntax-highlighting.nix
 {
-  home.file.".config/zsh/fast-syntax-colors.zsh".text = /* zsh */ ''
+  config.zshrc.fast-syntax-colors = /* zsh */ ''
     # runs before fast-syntax-highlighting sources (order 1000 vs 1200),
     # so declare the array ourselves rather than relying on the plugin
     typeset -gA FAST_HIGHLIGHT_STYLES

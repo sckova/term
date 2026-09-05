@@ -1,6 +1,6 @@
 # modules/zsh/binds.nix
 {
-  home.file.".config/zsh/binds.zsh".text = /* zsh */ ''
+  config.zshrc.binds = /* zsh */ ''
     # load zpty module
     zmodload zsh/zpty
 
