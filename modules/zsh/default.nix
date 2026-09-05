@@ -11,6 +11,7 @@
     ./scripts.nix
     ./settings.nix
     ./syntax-highlighting.nix
+    ./zdot.nix
   ];
 
   options.zshrc = lib.mkOption {
