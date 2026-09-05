@@ -82,7 +82,7 @@
     fzf = {
       enable = true;
 
-      colors = with config.scheme.withHashtag; {
+      colors = with config.palette.withHashtag; {
         bg = base00;
         "bg+" = base01;
         border = base03;
@@ -91,11 +91,11 @@
         header = base08;
         hl = base08;
         "hl+" = base08;
-        info = config.scheme.withHashtag.${config.colors.accent};
+        info = config.palette.withHashtag.${config.colors.accent};
         label = base05;
         marker = base07;
         pointer = base06;
-        prompt = config.scheme.withHashtag.${config.colors.accent};
+        prompt = config.palette.withHashtag.${config.colors.accent};
         "selected-bg" = base02;
         spinner = base06;
       };

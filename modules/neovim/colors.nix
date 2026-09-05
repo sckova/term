@@ -8,7 +8,7 @@
       colorscheme =
         let
           cleanScheme = {
-            inherit (config.scheme.withHashtag)
+            inherit (config.palette.withHashtag)
               base00
               base01
               base02
@@ -30,7 +30,7 @@
         in
         cleanScheme
         // {
-          base08 = config.scheme.withHashtag.${config.colors.accent};
+          base08 = config.palette.withHashtag.${config.colors.accent};
         }
         // (
           if (builtins.elem config.colors.accent (builtins.attrNames cleanScheme)) then
@@ -55,13 +55,13 @@
 
       FoldColumn = {
         bg = "NONE"; # the color of the fold icons and backdrop
-        fg = config.scheme.withHashtag.base04;
+        fg = config.palette.withHashtag.base04;
       };
 
       # the color of the actual folded text line
       Folded = {
         bg = "NONE";
-        fg = config.scheme.withHashtag.base03;
+        fg = config.palette.withHashtag.base03;
       };
 
       LineNr = {

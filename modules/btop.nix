@@ -11,7 +11,7 @@
 
     # Inspired by https://github.com/catppuccin/btop
     themes.nixos =
-      with config.scheme.withHashtag;
+      with config.palette.withHashtag;
       lib.generators.toKeyValue
         {
           mkKeyValue = k: v: /* ini */ "theme[${k}]=\"${v}\"";

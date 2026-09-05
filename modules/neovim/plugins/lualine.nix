@@ -1,7 +1,7 @@
 # modules/neovim/plugins/lualine.nix
 { config, ... }:
 {
-  programs.nixvim.plugins.lualine = with config.scheme.withHashtag; {
+  programs.nixvim.plugins.lualine = with config.palette.withHashtag; {
     enable = true;
 
     settings = {

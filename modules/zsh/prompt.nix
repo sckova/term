@@ -13,9 +13,9 @@
         lib.mapAttrsToList (name: value: "color_${name}=${value}") (
           lib.filterAttrs (
             n: v: builtins.isString v && builtins.match "^base[0-9A-Fa-f]{2}$" n != null
-          ) config.scheme.withHashtag
+          ) config.palette.withHashtag
         )
-        ++ [ "color_accent=${config.scheme.withHashtag.${config.colors.accent}}" ]
+        ++ [ "color_accent=${config.palette.withHashtag.${config.colors.accent}}" ]
       );
     };
 
