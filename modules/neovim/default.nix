@@ -26,7 +26,14 @@
 
   programs.nixvim = {
     enable = true;
+  }
+  // {
     viAlias = true;
     vimAlias = true;
+  }
+  # don't write into ~/.config
+  // {
+    impureRtp = false;
+    wrapRc = true;
   };
 }
