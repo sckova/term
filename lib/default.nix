@@ -2,5 +2,6 @@
 {
   imports = [
     ./colors.nix
+    ./options.nix
   ];
 }

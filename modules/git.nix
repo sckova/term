@@ -42,8 +42,8 @@
         init.defaultBranch = "main";
 
         user = {
-          email = "kovacsmillio@gmail.com";
-          name = "Sean Kovacs";
+          email = config.email;
+          name = config.name;
         };
       };
     };
