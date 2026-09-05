@@ -27,6 +27,12 @@
       ];
     };
 
+    # writable location for .zcompdump
+    completionInit = /* zsh */ ''
+      autoload -Uz compinit
+      compinit -d "${config.xdg.cacheHome}/zsh/zcompdump"
+    '';
+
     # The default base keymap to use.
     # Type: null or one of “emacs”, “vicmd”, “viins”
     defaultKeymap = "emacs";
@@ -52,6 +58,8 @@
       # If a new command line being added to the history list duplicates an older one,
       # the older command is removed from the list (even if it is not the previous event)
       ignoreAllDups = true;
+      # writable location for .zsh_history
+      path = config.xdg.stateHome + "/zsh/history";
     };
 
     # Options related to zsh-history-substring-search
