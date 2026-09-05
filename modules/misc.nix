@@ -58,7 +58,6 @@
     eza = {
       enable = true;
       colors = "always";
-      enableZshIntegration = true;
       git = true;
       icons = "auto";
     };
@@ -104,8 +103,6 @@
         "--height 40%"
         "--border"
       ];
-
-      enableZshIntegration = true;
     };
 
     lazysql.enable = true;
