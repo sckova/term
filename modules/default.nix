@@ -4,6 +4,7 @@
     ./btop.nix
     ./fastfetch.nix
     ./git.nix
+    ./misc.nix
     ./neovim
     ./ssh.nix
     ./zsh
