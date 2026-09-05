@@ -42,8 +42,8 @@
         init.defaultBranch = "main";
 
         user = {
-          email = config.email;
-          name = config.name;
+          email = config.kovaterm.email;
+          name = config.kovaterm.name;
         };
       };
     };
