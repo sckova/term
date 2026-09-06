@@ -88,9 +88,11 @@
     initContent = lib.concatStringsSep "\n\n" (
       map (n: config.zshrc.${n}) [
         "binds"
+        "plugin-fpath"
         "colors"
         "prompt"
         "fast-syntax-colors"
+        "plugin-source"
       ]
     );
 
@@ -101,13 +103,5 @@
       HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND = "fg=white,bg=8,bold";
       HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND = "none";
     };
-
-    plugins = [
-      # fish-like tab autocomplete
-      {
-        name = "fzf-tab";
-        src = pkgs.zsh-fzf-tab;
-      }
-    ];
   };
 }

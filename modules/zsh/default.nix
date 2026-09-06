@@ -7,6 +7,7 @@
   imports = [
     ./aliases.nix
     ./binds.nix
+    ./plugins.nix
     ./prompt.nix
     ./scripts.nix
     ./settings.nix
