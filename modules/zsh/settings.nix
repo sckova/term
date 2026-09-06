@@ -87,6 +87,7 @@
     # Content to be added to ~/.config/zsh/.zshrc
     initContent = lib.concatStringsSep "\n\n" (
       map (n: config.zshrc.${n}) [
+        "aliases"
         "binds"
         "plugin-fpath"
         "colors"
