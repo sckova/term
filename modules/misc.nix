@@ -82,14 +82,14 @@
       enable = true;
 
       colors = with config.palette.withHashtag; {
-        bg = base00;
-        "bg+" = base01;
+        bg = "-1"; # transparent
+        "bg+" = "-1"; # transparent
         border = base03;
         fg = base05;
         "fg+" = base05;
         header = base08;
         hl = base08;
-        "hl+" = base08;
+        "hl+" = config.palette.withHashtag.${config.colors.accent};
         info = config.palette.withHashtag.${config.colors.accent};
         label = base05;
         marker = base07;
@@ -100,8 +100,10 @@
       };
 
       defaultOptions = [
-        "--height 40%"
+        "--height 20%"
         "--border"
+        ''--border="rounded"''
+        ''--preview-window="border-rounded"''
       ];
     };
 
