@@ -3,12 +3,11 @@
   config,
   lib,
   pkgs,
-  hostname,
   ...
 }:
 let
   f = config.home.file;
-  file = pkgs.runCommand "zdotdir-${hostname}" { } ''
+  file = pkgs.runCommand "zdotdir" { } ''
     mkdir -p $out
     cp ${pkgs.writeText ".zshenv" f.".config/zsh/.zshenv".text} $out/.zshenv
     sed -i '/^export ZDOTDIR=/d; /^ZDOTDIR=/d' $out/.zshenv
