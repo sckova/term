@@ -38,7 +38,6 @@
       settings = {
         commit.gpgsign = true;
         core.pager = lib.getExe pkgs.page;
-        diff.external = lib.getExe pkgs.difftastic;
         init.defaultBranch = "main";
 
         user = {
