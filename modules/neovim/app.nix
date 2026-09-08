@@ -13,7 +13,7 @@
       ];
 
       comment = "Edit text files in your terminal";
-      exec = "ghostty --class=nvim -e nvim %F";
+      exec = "ghostty --class=nvim -e nvim -c \"FzfLua files\" %F";
       genericName = "Text Editor";
       icon = "nvim";
 
