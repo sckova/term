@@ -7,6 +7,11 @@
 {
   config = lib.mkIf pkgs.stdenv.hostPlatform.isLinux {
     xdg.desktopEntries.nvim = {
+      actions.new-window = {
+        exec = "ghostty --class=org.neovim.nvim -e nvim -c \"FzfLua files\" %F";
+        name = "New Window";
+      };
+
       categories = [
         "Utility"
         "TextEditor"
