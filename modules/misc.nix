@@ -20,7 +20,6 @@
     packages =
       with pkgs;
       [
-        difftastic
         ffmpeg
         jq
         ncdu

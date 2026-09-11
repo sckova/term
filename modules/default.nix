@@ -2,6 +2,7 @@
 {
   imports = [
     ./btop.nix
+    ./difft.nix
     ./fastfetch.nix
     ./git.nix
     ./misc.nix
