@@ -1,21 +1,25 @@
 # modules/zsh/aliases.nix
+{ lib, ... }:
 {
-  config.zshrc.aliases = /* zsh */ ''
-    alias -- :q=exit
-    alias -- cat=bat
-    alias -- eza='eza --icons auto --color always --git'
-    alias -- ga='git add -v .'
-    alias -- gac='git add -v . && git commit'
-    alias -- gaca='git add -v . && git commit --amend --no-edit'
-    alias -- gd='git diff'
-    alias -- gl='git log'
-    alias -- gp='git push'
-    alias -- gpf='git push --force'
-    alias -- gzip=pigz
-    alias -- la='eza -a'
-    alias -- ll='eza -l'
-    alias -- lla='eza -la'
-    alias -- ls=eza
-    alias -- lt='eza --tree'
-  '';
+  config.zshrc.aliases = lib.concatStringsSep "\n" (
+    lib.mapAttrsToList (name: value: "alias -- ${name}='${value}'") {
+      ":q" = "exit";
+      cat = "bat";
+      eza = "eza --icons auto --color always --git";
+      ga = "git add -v .";
+      gac = "git add -v . && git commit";
+      gaca = "git add -v . && git commit --amend --no-edit";
+      gd = "git diff";
+      gdt = "git -c diff.external=difft diff --ext-diff";
+      gl = "git log";
+      gp = "git push";
+      gpf = "git push --force";
+      gzip = "pigz";
+      la = "eza -a";
+      ll = "eza -l";
+      lla = "eza -la";
+      ls = "eza";
+      lt = "eza --tree";
+    }
+  );
 }
