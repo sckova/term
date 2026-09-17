@@ -20,7 +20,6 @@
         accessible_colors = "disabled";
         accessible_prompter = "disabled";
         aliases.co = "pr checkout";
-        browser = lib.getExe pkgs.firefox;
         color_labels = "enabled";
         editor = lib.getExe pkgs.neovim;
         git_protocol = "https";
