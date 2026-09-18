@@ -14,7 +14,11 @@
       gac = "git add -v . && git commit";
       gaca = "git add -v . && git commit --amend --no-edit";
       gd = "git diff";
-      gdt = "git -c diff.external=${lib.getExe config.programs.difftastic.package} diff --ext-diff";
+
+      gdt = "git -c \"diff.external=${lib.getExe config.programs.difftastic.package} ${
+        lib.cli.toCommandLineShellGNU { } config.programs.difftastic.options
+      }\" diff --ext-diff";
+
       gl = "git log";
       gp = "git push";
       gpf = "git push --force";
