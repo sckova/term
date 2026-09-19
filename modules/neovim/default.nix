@@ -10,8 +10,7 @@
     ./colors.nix
     ./keybinds.nix
     ./pedantix.nix
-    ./plugins/coding.nix
-    ./plugins/lualine.nix
+    ./plugins
     ./settings.nix
   ];
 
