@@ -112,6 +112,7 @@ in
     };
 
     fzf-lua.enable = true;
+    gitsigns.enable = true;
 
     lsp = {
       enable = true;

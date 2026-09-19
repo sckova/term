@@ -42,54 +42,118 @@
       setUpBar = false;
     };
 
-    highlight = {
-      CursorLineNr = {
-        bg = "NONE";
-        ctermbg = "NONE";
-      };
+    # enable transparency
+    highlight =
+      with config.palette.withHashtag;
+      {
+        CursorLineNr = {
+          bg = "NONE";
+          ctermbg = "NONE";
+        };
 
-      EndOfBuffer = {
-        bg = "NONE";
-        ctermbg = "NONE";
-      };
+        EndOfBuffer = {
+          bg = "NONE";
+          ctermbg = "NONE";
+        };
 
-      FoldColumn = {
-        bg = "NONE"; # the color of the fold icons and backdrop
-        fg = config.palette.withHashtag.base04;
-      };
+        # the color of the fold icons and backdrop
+        FoldColumn = {
+          bg = "NONE";
+          fg = base04;
+        };
 
-      # the color of the actual folded text line
-      Folded = {
-        bg = "NONE";
-        fg = config.palette.withHashtag.base03;
-      };
+        # the color of the actual folded text line
+        Folded = {
+          bg = "NONE";
+          fg = base03;
+        };
 
-      LineNr = {
-        bg = "NONE";
-        ctermbg = "NONE";
-      };
+        LineNr = {
+          bg = "NONE";
+          ctermbg = "NONE";
+        };
 
-      # enable transparency
-      Normal = {
-        bg = "NONE";
-        ctermbg = "NONE";
-      };
+        Normal = {
+          bg = "NONE";
+          ctermbg = "NONE";
+        };
 
-      NormalFloat = {
-        bg = "NONE";
-        ctermbg = "NONE";
-      };
+        NormalFloat = {
+          bg = "NONE";
+          ctermbg = "NONE";
+        };
 
-      NormalNC = {
-        bg = "NONE";
-        ctermbg = "NONE";
-      };
+        NormalNC = {
+          bg = "NONE";
+          ctermbg = "NONE";
+        };
 
-      SignColumn = {
-        bg = "NONE";
-        ctermbg = "NONE";
+        SignColumn = {
+          bg = "NONE";
+          ctermbg = "NONE";
+        };
+      }
+      # gitsigns colors
+      // {
+        GitSignsAdd = {
+          bg = "NONE";
+          fg = base0B;
+        };
+
+        GitSignsChange = {
+          bg = "NONE";
+          fg = base0D;
+        };
+
+        GitSignsChangedelete = {
+          bg = "NONE";
+          fg = base0E;
+        };
+
+        GitSignsDelete = {
+          bg = "NONE";
+          fg = base08;
+        };
+
+        GitSignsStagedAdd = {
+          bg = "NONE";
+          fg = base0B;
+        };
+
+        GitSignsStagedChange = {
+          bg = "NONE";
+          fg = base0D;
+        };
+
+        GitSignsStagedChangedelete = {
+          bg = "NONE";
+          fg = base0E;
+        };
+
+        GitSignsStagedDelete = {
+          bg = "NONE";
+          fg = base08;
+        };
+
+        GitSignsStagedTopdelete = {
+          bg = "NONE";
+          fg = base08;
+        };
+
+        GitSignsStagedUntracked = {
+          bg = "NONE";
+          fg = base0B;
+        };
+
+        GitSignsTopdelete = {
+          bg = "NONE";
+          fg = base08;
+        };
+
+        GitSignsUntracked = {
+          bg = "NONE";
+          fg = base0B;
+        };
       };
-    };
   };
-
 }
