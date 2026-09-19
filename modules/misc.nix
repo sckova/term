@@ -20,6 +20,7 @@
     packages =
       with pkgs;
       [
+        chafa
         ffmpeg
         jq
         ncdu
@@ -30,7 +31,6 @@
         wget
       ]
       ++ lib.optionals pkgs.stdenv.hostPlatform.isLinux [
-        fh # build is currently broken in darwin
         waypipe
         wl-clipboard
       ]
